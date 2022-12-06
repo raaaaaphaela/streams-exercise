@@ -35,6 +35,7 @@ public class Main {
                     .filter(x -> !x.equals(""))
                     .distinct()
                     .map(line -> line.split(","))
+                    .filter(x -> x.length == 4)
                     .map(data -> new Student(Integer.parseInt(data[0]), data[1], Integer.parseInt(data[2]), Integer.parseInt(data[3]))).toList();
 
             lines.forEach(System.out::println);
